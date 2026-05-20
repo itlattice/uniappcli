@@ -1,0 +1,19 @@
+{
+    "packConfigPath":"pack.json",  //相对于目录的打包配置文件路径
+    "pack":["app-android"],  //要打包的平台，值有"app-android","app-ios"，"web","mp-weixin" （目前暂时仅支持这些）如果要打多个逗号隔开
+    "manifest":{  //需要动态修改的manifest的参数
+        "app-android": {
+            "distribute": {
+                "abiFilters": [
+                    "arm64-v8a"
+                ],
+                "icons": {
+                    "hdpi": "{$path}/static/logo/72x72.png",
+                    "xhdpi": "{$path}/static/logo/96x96.png",
+                    "xxhdpi": "{$path}/static/logo/144x144.png",
+                    "xxxhdpi": "{$path}/static/logo/192x192.png"
+                }
+            }
+        }
+    }
+}
